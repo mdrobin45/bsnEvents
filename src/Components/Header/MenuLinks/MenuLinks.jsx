@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import "./style.css";
 
 const MenuLinks = ({ mobileExpand }) => {
    return (
@@ -31,7 +32,7 @@ const MenuLinks = ({ mobileExpand }) => {
             </li>
             <li>
                <NavLink
-                  to="/"
+                  to="/contact"
                   className="block py-2 pl-3 pr-4 text-gray-700 font-barlow uppercase hover:text-primary rounded md:bg-transparent md:p-0">
                   Contact
                </NavLink>

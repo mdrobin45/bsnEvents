@@ -17,7 +17,11 @@ const EventCard = ({ event }) => {
       <div>
          <div className="relative flex max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
             <div className="relative m-0 overflow-hidden rounded-none bg-transparent bg-clip-border text-gray-700 shadow-none">
-               <img src={image} alt="ui/ux review check" />
+               <img
+                  className=" hover:scale-[1.1] transition-all"
+                  src={image}
+                  alt="ui/ux review check"
+               />
                <div
                   className="middle absolute bottom-0 left-0 none border-2 border-primary center bg-primary py-2 font-semibold px-6 font-barlow text-lg rounded-tr-md text-white shadow-md transition-all"
                   to="/login"
