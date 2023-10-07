@@ -1,4 +1,5 @@
 import Banner from "../../Components/Home/Banner/Banner";
+import Counter from "../../Components/Home/Counter/Counter";
 import Events from "../../Components/Home/Events/Events";
 import SiteTitle from "../../Components/SiteTitle/SiteTitle";
 
@@ -14,6 +15,7 @@ const Home = () => {
             <Banner />
          </div>
          <Events />
+         <Counter />
       </>
    );
 };
