@@ -6,6 +6,7 @@ import {
    sendPasswordResetEmail,
    signInWithEmailAndPassword,
    signInWithPopup,
+   signOut,
    updateProfile,
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
@@ -56,6 +57,12 @@ const AuthContextProvider = ({ children }) => {
       return signInWithPopup(auth, gitHubAuthProvider);
    };
 
+   // Log Out
+   const logOut = () => {
+      setIsLoading(true);
+      return signOut(auth);
+   };
+
    // Get current user
    useEffect(() => {
       const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -69,6 +76,7 @@ const AuthContextProvider = ({ children }) => {
 
    const authInfo = {
       user,
+      logOut,
       isLoading,
       profileUpdate,
       loginWithGitHub,

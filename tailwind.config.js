@@ -2,7 +2,14 @@
 export default {
    content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
    theme: {
-      extend: {},
+      extend: {
+         fontFamily: {
+            barlow: "Barlow, sans-serif",
+         },
+         colors: {
+            primary: "#ce1446",
+         },
+      },
    },
    plugins: [],
 };
