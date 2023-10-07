@@ -11,7 +11,7 @@ const Counter = () => {
          style={{
             background: `linear-gradient(rgba(45,55,60,0.9) 100%,rgba(45,55,60,0.9) 100%),url(${bgImage})`,
          }}
-         className="py-32 my-32">
+         className="py-32 mt-32 mb-20">
          <div className="flex px-20 items-center justify-between">
             <div className="text-center">
                <img className="mx-auto" src={speakerImg} alt="Speaker" />

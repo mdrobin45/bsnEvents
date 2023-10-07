@@ -1,6 +1,7 @@
 import Banner from "../../Components/Home/Banner/Banner";
 import Counter from "../../Components/Home/Counter/Counter";
 import Events from "../../Components/Home/Events/Events";
+import SpeakerSlider from "../../Components/Home/Speakers/SpeakerSlider";
 import SiteTitle from "../../Components/SiteTitle/SiteTitle";
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
          </div>
          <Events />
          <Counter />
+         <SpeakerSlider />
       </>
    );
 };
