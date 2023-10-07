@@ -1,5 +1,5 @@
 const SiteTitle = ({ children }) => {
-   return <div>{(document.title = children)}</div>;
+   document.title = children;
 };
 
 export default SiteTitle;

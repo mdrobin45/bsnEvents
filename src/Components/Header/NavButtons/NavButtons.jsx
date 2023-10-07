@@ -31,7 +31,7 @@ const NavButtons = ({ expandBtnClick }) => {
             </>
          ) : (
             <Link
-               className="middle none center mb-2 block w-full rounded-lg bg-primary py-3 px-6 font-barlow text-lg font-normal uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+               className="middle none border-2 border-primary hover:bg-transparent uppercase hover:border-primary center mb-2 rounded-lg bg-primary hover:text-primary py-2 font-semibold px-6 font-barlow text-lg text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                to="/login"
                data-ripple-light="true">
                <span>Login</span>
