@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import EventDetails from "../Pages/EventDetails/EventDetails";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Pricing from "../Pages/Pricing/Pricing";
@@ -30,6 +31,16 @@ const router = createBrowserRouter([
          {
             path: "/register",
             element: <Register />,
+         },
+         {
+            path: "/events",
+            element: <EventDetails />,
+            children: [
+               {
+                  path: "/events/:id",
+                  element: <EventDetails />,
+               },
+            ],
          },
       ],
    },

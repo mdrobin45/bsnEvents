@@ -1,7 +1,8 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "./style.css";
 
 const MenuLinks = ({ mobileExpand }) => {
+   const { pathname } = useLocation();
    return (
       <div
          className={`items-center justify-between ${
@@ -11,7 +12,9 @@ const MenuLinks = ({ mobileExpand }) => {
             <li>
                <NavLink
                   to="/"
-                  className="block py-2 pl-3 pr-4 text-gray-700 font-barlow uppercase hover:text-primary rounded md:bg-transparent md:p-0"
+                  className={`block py-2 pl-3 pr-4 ${
+                     pathname === "/" ? "text-gray-700" : "text-white"
+                  } font-barlow uppercase hover:text-primary rounded md:bg-transparent md:p-0`}
                   aria-current="page">
                   Home
                </NavLink>
@@ -19,21 +22,27 @@ const MenuLinks = ({ mobileExpand }) => {
             <li>
                <NavLink
                   to="/speakers"
-                  className="block py-2 pl-3 pr-4 text-gray-700 font-barlow uppercase hover:text-primary rounded md:bg-transparent md:p-0">
+                  className={`block py-2 pl-3 pr-4 ${
+                     pathname === "/" ? "text-gray-700" : "text-white"
+                  } font-barlow uppercase hover:text-primary rounded md:bg-transparent md:p-0`}>
                   Speakers
                </NavLink>
             </li>
             <li>
                <NavLink
                   to="/pricing"
-                  className="block py-2 pl-3 pr-4 text-gray-700 font-barlow uppercase hover:text-primary rounded md:bg-transparent md:p-0">
+                  className={`block py-2 pl-3 pr-4 ${
+                     pathname === "/" ? "text-gray-700" : "text-white"
+                  } font-barlow uppercase hover:text-primary rounded md:bg-transparent md:p-0`}>
                   Pricing
                </NavLink>
             </li>
             <li>
                <NavLink
                   to="/contact"
-                  className="block py-2 pl-3 pr-4 text-gray-700 font-barlow uppercase hover:text-primary rounded md:bg-transparent md:p-0">
+                  className={`block py-2 pl-3 pr-4 ${
+                     pathname === "/" ? "text-gray-700" : "text-white"
+                  } font-barlow uppercase hover:text-primary rounded md:bg-transparent md:p-0`}>
                   Contact
                </NavLink>
             </li>
