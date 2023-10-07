@@ -1,4 +1,5 @@
 import Banner from "../../Components/Home/Banner/Banner";
+import Events from "../../Components/Home/Events/Events";
 import SiteTitle from "../../Components/SiteTitle/SiteTitle";
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
             }}>
             <Banner />
          </div>
+         <Events />
       </>
    );
 };
