@@ -8,7 +8,8 @@ const FetchDataContextProvider = ({ children }) => {
    useEffect(() => {
       fetch("https://mdrobin45.github.io/api/events.json")
          .then((res) => res.json())
-         .then((data) => setEvents(data));
+         .then((data) => setEvents(data))
+         .catch((err) => console.log(err));
    }, []);
    return (
       <FetchContext.Provider value={events}>{children}</FetchContext.Provider>
