@@ -11,7 +11,7 @@ const Header = () => {
       setExpandMobileMenu(!expandMobileMenu);
    };
    return (
-      <nav className=" bg-transparent absolute px-20 w-full z-20 top-0 left-0">
+      <nav className="bg-transparent absolute pt-3 px-20 w-full z-20 top-0 left-0">
          <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <Logo />
             <NavButtons expandBtnClick={hamburgerClick} />
