@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
+import { ClipLoader } from "react-spinners";
 import { AuthContext } from "../MyContext/AuthContextProvider";
 
 const PrivateRoute = ({ children }) => {
@@ -7,8 +8,11 @@ const PrivateRoute = ({ children }) => {
    const location = useLocation();
 
    if (isLoading) {
-      // Show a loading spinner here
-      return;
+      return (
+         <div className="h-screen flex flex-col items-center justify-center">
+            <ClipLoader color="#ce1446" />
+         </div>
+      );
    }
 
    if (!user) {

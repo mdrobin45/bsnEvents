@@ -1,9 +1,10 @@
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../../MyContext/AuthContextProvider";
 
 const GoogleSignIn = ({ setErrorMsg }) => {
    const { loginWithGoogle } = useContext(AuthContext);
+   const { state } = useLocation();
    const navigate = useNavigate();
 
    // Handle signIn with google
@@ -11,7 +12,11 @@ const GoogleSignIn = ({ setErrorMsg }) => {
       loginWithGoogle()
          .then((result) => {
             if (result.user) {
-               // Do something after login with google
+               if (state !== null) {
+                  navigate(state.prevUrl);
+               } else {
+                  navigate("/");
+               }
             }
          })
          .catch((error) => {

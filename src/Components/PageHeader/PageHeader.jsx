@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
+import bgImage from "../../assets/images/achievement-bg.png";
 
-const PageHeader = ({ title, bgImage }) => {
+const PageHeader = ({ title }) => {
    return (
       <div
          className="px-20   pt-64 pb-28"
@@ -44,7 +45,7 @@ const PageHeader = ({ title, bgImage }) => {
                            d="m1 9 4-4-4-4"
                         />
                      </svg>
-                     <span className="ml-1 text-lg text-primary md:ml-2">
+                     <span className="ml-1 text-lg text-gray-300 md:ml-2">
                         {title}
                      </span>
                   </div>

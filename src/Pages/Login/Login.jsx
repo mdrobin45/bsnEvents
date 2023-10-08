@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import DisplayError from "../../Components/FormElements/FormFields/DisplayError";
 import Email from "../../Components/FormElements/FormFields/Email";
 import Password from "../../Components/FormElements/FormFields/Password";
@@ -7,12 +8,15 @@ import SubmitBtn from "../../Components/FormElements/FormFields/SubmitBtn";
 import FormFooter from "../../Components/FormElements/FormFooter/FormFooter";
 import GoogleSignIn from "../../Components/FormElements/FormFooter/SocialSignIn/GoogleSignIn";
 import FormHeader from "../../Components/FormElements/FormHeader/FormHeader";
+import PageHeader from "../../Components/PageHeader/PageHeader";
 import SiteTitle from "../../Components/SiteTitle/SiteTitle";
 import { AuthContext } from "../../MyContext/AuthContextProvider";
 
 const Login = () => {
    const [errorMessage, setErrorMessage] = useState(null);
    const { loginWithEmailPassword } = useContext(AuthContext);
+   const { state } = useLocation();
+   const navigate = useNavigate();
 
    // Form submit
    const handleFormSubmit = (e) => {
@@ -20,18 +24,45 @@ const Login = () => {
       const email = e.target.email.value;
       const password = e.target.password.value;
 
+      // Custom tost message
+      const toastMsg = toast.loading("");
+      toast.update(toastMsg, {
+         render: "Please wait...",
+         isLoading: true,
+      });
+
       // Firebase email password login
       loginWithEmailPassword(email, password)
          .then((result) => {
             if (result.user) {
-               // Do something after login
+               toast.update(toastMsg, {
+                  render: "Login Successful!",
+                  type: "success",
+                  isLoading: false,
+                  autoClose: 1500,
+               });
+               if (state !== null) {
+                  navigate(state.prevUrl);
+               } else {
+                  navigate("/");
+               }
             }
          })
-         .catch((err) => setErrorMessage(err.message));
+         .catch((err) => {
+            if (err) {
+               toast.update(toastMsg, {
+                  render: "Incorrect email or password",
+                  type: "error",
+                  isLoading: false,
+                  autoClose: 1500,
+               });
+            }
+         });
    };
    return (
       <>
          <SiteTitle>Login</SiteTitle>
+         <PageHeader title="Login" />
          <div className="flex flex-col items-center justify-center px-16 py-16">
             <div className="relative pb-6 flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
                <FormHeader heading="Login" />

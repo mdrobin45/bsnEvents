@@ -6,6 +6,7 @@ import Pricing from "../Pages/Pricing/Pricing";
 import Register from "../Pages/Register/Register";
 import Speakers from "../Pages/Speakers/Speakers";
 import Root from "../Root/Root";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
    {
@@ -35,12 +36,20 @@ const router = createBrowserRouter([
          },
          {
             path: "/events",
-            element: <EventDetails />,
+            element: (
+               <PrivateRoute>
+                  <EventDetails />
+               </PrivateRoute>
+            ),
             loader: () => fetch("https://mdrobin45.github.io/api/events.json"),
             children: [
                {
                   path: "/events/:eventId",
-                  element: <EventDetails />,
+                  element: (
+                     <PrivateRoute>
+                        <EventDetails />
+                     </PrivateRoute>
+                  ),
                },
             ],
          },
