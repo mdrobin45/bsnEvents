@@ -21,11 +21,20 @@ const MenuLinks = ({ mobileExpand }) => {
             </li>
             <li>
                <NavLink
-                  to="/pricing"
+                  to="/dashboard"
                   className={`block py-2 pl-3 pr-4 ${
                      pathname === "/" ? "text-gray-700" : "text-white"
                   } font-barlow uppercase hover:text-primary rounded md:bg-transparent md:p-0`}>
-                  Pricing
+                  Dashboard
+               </NavLink>
+            </li>
+            <li>
+               <NavLink
+                  to="/profile"
+                  className={`block py-2 pl-3 pr-4 ${
+                     pathname === "/" ? "text-gray-700" : "text-white"
+                  } font-barlow uppercase hover:text-primary rounded md:bg-transparent md:p-0`}>
+                  Profile
                </NavLink>
             </li>
             <li>

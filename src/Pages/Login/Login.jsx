@@ -72,7 +72,7 @@ const Login = () => {
                      <div className="-ml-2.5">
                         <Link
                            to="/reset-password"
-                           className="ml-1 mb-3 block font-sans text-sm font-bold leading-normal text-pink-500 antialiased">
+                           className="ml-1 mb-3 block font-sans text-sm font-bold leading-normal text-primary antialiased">
                            Forgotten Password?
                         </Link>
                         <SubmitBtn btnText="Login" />

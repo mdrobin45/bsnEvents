@@ -10,7 +10,7 @@ const SpeakerSlider = () => {
 
    // Fetch speakers
    useEffect(() => {
-      fetch("/public/speakers.json")
+      fetch("https://mdrobin45.github.io/api/speakers.json")
          .then((res) => res.json())
          .then((data) => setSpeakers(data));
    }, []);

@@ -7,7 +7,7 @@ import {
 } from "react-icons/bi";
 import { BsTelephonePlus } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
    return (
@@ -106,9 +106,11 @@ const Footer = () => {
                </p>
             </div>
             <div className="w-1/3 text-center">
-               <h2 className="text-2xl font-bold font-barlow text-white">
-                  Logo
-               </h2>
+               <Link to="/" className="flex items-center justify-center">
+                  <h2 className="text-4xl text-white font-bold font-barlow">
+                     LIC <span className="text-primary">2.0</span>
+                  </h2>
+               </Link>
             </div>
             <div className="flex w-1/3 items-center justify-end">
                <p className="flex items-center justify-between gap-3">

@@ -76,7 +76,7 @@ const EventInfo = () => {
                   <p className="text-md font-barlow font-semibold text-black">
                      Event Type
                   </p>
-                  <p className="text-sm">10 Best Speaker</p>
+                  <p className="text-sm">Leadership Growth</p>
                </div>
             </div>
             <div className="flex gap-2">
@@ -87,7 +87,7 @@ const EventInfo = () => {
                   <p className="text-md font-barlow font-semibold text-black">
                      Speakers
                   </p>
-                  <p className="text-sm">10 Best Speaker</p>
+                  <p className="text-sm">2 Best Speaker</p>
                </div>
             </div>
             <div className="flex gap-2">
@@ -98,7 +98,7 @@ const EventInfo = () => {
                   <p className="text-md font-barlow font-semibold text-black">
                      Sponsor
                   </p>
-                  <p className="text-sm">10 Best Speaker</p>
+                  <p className="text-sm">Guru Inc</p>
                </div>
             </div>
             <div className="text-center">

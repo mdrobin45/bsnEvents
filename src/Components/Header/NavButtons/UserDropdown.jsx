@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../../MyContext/AuthContextProvider";
 
@@ -24,24 +23,6 @@ const UserDropdown = ({ expandProfile }) => {
                {email ? email : "email not found"}
             </div>
          </div>
-         <ul
-            className="py-2 text-sm text-gray-700"
-            aria-labelledby="avatarButton">
-            <li>
-               <Link
-                  to="/dashboard"
-                  className="block font-barlow uppercase px-4 py-2 hover:bg-gray-100">
-                  Dashboard
-               </Link>
-            </li>
-            <li>
-               <Link
-                  to="/profile"
-                  className="block font-barlow uppercase px-4 py-2 hover:bg-gray-100">
-                  Profile
-               </Link>
-            </li>
-         </ul>
          <div className="py-1">
             <button
                onClick={handleLogOut}

@@ -1,16 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Logo = () => {
+   const { pathname } = useLocation();
    return (
       <Link to="/" className="flex items-center">
-         <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-8 mr-3"
-            alt="Flowbite Logo"
-         />
-         <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Flowbite
-         </span>
+         <h2
+            className={`text-4xl ${
+               pathname === "/" ? "text-gray-800" : "text-white"
+            } font-bold font-barlow`}>
+            LIC <span className="text-primary">2.0</span>
+         </h2>
       </Link>
    );
 };
