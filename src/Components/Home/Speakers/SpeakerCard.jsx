@@ -9,8 +9,8 @@ const SpeakerCard = ({ speaker }) => {
    const { image, name, title } = speaker;
    return (
       <div className="relative flex flex-col rounded-xl bg-gray-100 bg-clip-border text-gray-700 shadow-md">
-         <div className="relative mx-4 mt-4 h-80 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
-            <img src={image} alt="profile-picture" />
+         <div className="relative mx-4 mt-4 h-64 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
+            <img className="w-full" src={image} alt="profile-picture" />
          </div>
          <div className="p-6 text-center">
             <h4 className="mb-2 block text-gray-700 text-2xl font-barlow font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">

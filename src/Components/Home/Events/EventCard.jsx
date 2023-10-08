@@ -10,7 +10,8 @@ import { FiMapPin } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 const EventCard = ({ event }) => {
-   const { title, image, event_date, price, address, long_description } = event;
+   const { id, title, image, event_date, price, address, long_description } =
+      event;
    const formateEventDate = dateFormat(event_date, "longDate");
    const eventAddress = address.split(",").slice(-2).toString();
    return (
@@ -54,7 +55,7 @@ const EventCard = ({ event }) => {
             <div className="flex items-center justify-between pb-6 px-3">
                <Link
                   className="text-sm underline text-primary font-semibold"
-                  to="/booking/">
+                  to={`/events/${id}`}>
                   Book Now
                </Link>
                <div className="flex items-center justify-between gap-3">
