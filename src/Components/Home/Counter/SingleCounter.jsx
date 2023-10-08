@@ -9,9 +9,6 @@ const SingleCounter = ({ title, countStart, countEnd }) => {
          <ScrollTrigger
             onEnter={() => {
                setCounterOn(true);
-            }}
-            onExit={() => {
-               setCounterOn(false);
             }}>
             <h3 className="my-2">
                {counterOn && (

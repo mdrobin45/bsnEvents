@@ -12,7 +12,7 @@ const Password = () => {
          <input
             type={`${showPassword ? "text" : "password"}`}
             name="password"
-            className="peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:ring-0 focus:border-t-transparent focus:outline-0 disabled:border-0"
+            className="peer h-full w-full rounded-md border border-blue-gray-200 bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:ring-0 focus:border-t-transparent focus:outline-0 disabled:border-0"
             placeholder=" "
          />
          <div

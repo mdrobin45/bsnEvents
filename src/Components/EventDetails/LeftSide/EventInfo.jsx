@@ -33,7 +33,7 @@ const EventInfo = () => {
    const eventAddress = address.split(",").slice(-2).toString();
 
    return (
-      <div className="relative my-16 flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+      <div className="relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
          <div className="relative m-0 h-96 overflow-hidden rounded-none bg-transparent bg-clip-border text-gray-700 shadow-none">
             <img className="w-full" src={image} alt="ui/ux review check" />
             <div

@@ -7,7 +7,7 @@ const EventDetails = () => {
    return (
       <>
          <PageHeader title="Event Details" bgImage={bgImage} />
-         <div className="px-20 flex items-center justify-between">
+         <div className="px-20 flex py-20 justify-between">
             <LeftSide />
             <RightSide />
          </div>
