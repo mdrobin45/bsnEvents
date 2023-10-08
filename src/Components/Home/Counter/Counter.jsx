@@ -11,8 +11,8 @@ const Counter = () => {
          style={{
             background: `linear-gradient(rgba(45,55,60,0.9) 100%,rgba(45,55,60,0.9) 100%),url(${bgImage})`,
          }}
-         className="py-32 mt-32 mb-20">
-         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-7 md:px-10 lg:px-20 gap-10 md:gap-0">
+         className="py-32 mt-32 lg:mb-20">
+         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-y-10 lg:gap-y-0 lg:grid-cols-4 px-7 md:px-10 lg:px-20 gap-10 md:gap-0">
             <div className="text-center">
                <img className="mx-auto" src={speakerImg} alt="Speaker" />
                <SingleCounter

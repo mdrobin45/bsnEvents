@@ -13,7 +13,7 @@ const NavButtons = ({ expandBtnClick }) => {
    };
 
    return (
-      <div className="flex md:order-2">
+      <div className="flex gap-4 md:gap-0 md:order-2">
          {user ? (
             <>
                <img
