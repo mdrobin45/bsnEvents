@@ -35,6 +35,7 @@ const router = createBrowserRouter([
          {
             path: "/events",
             element: <EventDetails />,
+            loader: () => fetch("https://mdrobin45.github.io/api/events.json"),
             children: [
                {
                   path: "/events/:eventId",

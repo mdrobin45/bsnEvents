@@ -7,9 +7,17 @@ import {
    BsMegaphone,
 } from "react-icons/bs";
 import { FiMapPin } from "react-icons/fi";
+import { useLoaderData, useParams } from "react-router-dom";
 import FacilityList from "./FacilityList";
+import Speaker from "./Speaker";
 
-const EventInfo = ({ event }) => {
+const EventInfo = () => {
+   const events = useLoaderData();
+   const { eventId } = useParams();
+
+   // Find events by id
+   const singleEvent = events.find((event) => event.id === parseFloat(eventId));
+
    const {
       image,
       title,
@@ -18,13 +26,14 @@ const EventInfo = ({ event }) => {
       address,
       long_description,
       facilities,
-   } = event;
+      speakers,
+   } = singleEvent;
 
    const formateEventDate = dateFormat(event_date, "longDate");
    const eventAddress = address.split(",").slice(-2).toString();
 
    return (
-      <div className="relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+      <div className="relative my-16 flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
          <div className="relative m-0 h-96 overflow-hidden rounded-none bg-transparent bg-clip-border text-gray-700 shadow-none">
             <img className="w-full" src={image} alt="ui/ux review check" />
             <div
@@ -34,7 +43,7 @@ const EventInfo = ({ event }) => {
                <span>$ {price}</span>
             </div>
          </div>
-         <div className="p-3">
+         <div className="p-3 mt-3">
             <div className="flex pb-3 items-center justify-between">
                <div className="flex items-center gap-3">
                   <p>
@@ -150,6 +159,14 @@ const EventInfo = ({ event }) => {
                   <FacilityList key={id} listItem={item} />
                ))}
             </ul>
+            <h3 className="text-xl mb-4 font-bold font-barlow mt-4">
+               Main Speaker:
+            </h3>
+            <div className="grid grid-cols-2">
+               {speakers.map((speaker, id) => (
+                  <Speaker key={id} speaker={speaker} />
+               ))}
+            </div>
          </div>
       </div>
    );
