@@ -13,7 +13,7 @@ const SingleCounter = ({ title, countStart, countEnd }) => {
             <h3 className="my-2">
                {counterOn && (
                   <CountUp
-                     className="text-6xl text-white font-bold font-barlow"
+                     className="text-3xl md:text-4xl lg:text-6xl text-white font-bold font-barlow"
                      start={countStart}
                      end={countEnd}
                      suffix=" +"
@@ -22,7 +22,7 @@ const SingleCounter = ({ title, countStart, countEnd }) => {
                )}
             </h3>
          </ScrollTrigger>
-         <h3 className="text-2xl text-white">{title}</h3>
+         <h3 className="text-xl lg:text-2xl text-white">{title}</h3>
       </div>
    );
 };

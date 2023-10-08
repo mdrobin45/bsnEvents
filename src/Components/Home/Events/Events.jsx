@@ -6,7 +6,7 @@ const Events = () => {
    const events = useLoaderData();
    return (
       <>
-         <div className="px-20">
+         <div className="px-7 md:px-10 lg:px-20">
             <SectionHeader title="Popular Event" subTitle="Event" />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                {events.map((event) => (

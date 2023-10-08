@@ -16,10 +16,18 @@ const SpeakerSlider = () => {
    }, []);
    return (
       <>
-         <div className="px-20 pb-20">
+         <div className="px-7 md:px-10 lg:px-20 pb-20">
             <SectionHeader title="TALENTED SPEAKER" subTitle="Speaker" />
             <Swiper
-               slidesPerView={3}
+               slidesPerView={1}
+               breakpoints={{
+                  520: {
+                     slidesPerView: 2,
+                  },
+                  768: {
+                     slidesPerView: 3,
+                  },
+               }}
                navigation={true}
                spaceBetween={30}
                pagination={{
