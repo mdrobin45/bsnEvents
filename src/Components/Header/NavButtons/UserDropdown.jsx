@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import { AuthContext } from "../../../MyContext/AuthContextProvider";
 
 const UserDropdown = ({ expandProfile }) => {
@@ -9,7 +10,7 @@ const UserDropdown = ({ expandProfile }) => {
    // Logout
    const handleLogOut = () => {
       logOut().then(() => {
-         // Do something after logout
+         toast.error("Your are logged out!");
       });
    };
    return (

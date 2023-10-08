@@ -2,15 +2,16 @@ import { useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../../../MyContext/AuthContextProvider";
+import githubIcon from "../../../../assets/images/github.svg";
 
-const GoogleSignIn = () => {
-   const { loginWithGoogle } = useContext(AuthContext);
+const GithubSignIn = () => {
+   const { loginWithGitHub } = useContext(AuthContext);
    const { state } = useLocation();
    const navigate = useNavigate();
 
    // Handle signIn with google
-   const handleGoogleSignIn = () => {
-      loginWithGoogle()
+   const handleGithubSignIn = () => {
+      loginWithGitHub()
          .then((result) => {
             if (result.user) {
                const toastMsg = toast.loading("");
@@ -42,17 +43,17 @@ const GoogleSignIn = () => {
 
    return (
       <button
-         onClick={handleGoogleSignIn}
-         className="px-4 w-4/5 justify-center mx-auto py-2 border flex gap-2 border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150">
+         onClick={handleGithubSignIn}
+         className="px-4 mt-4 w-4/5 justify-center mx-auto py-2 border flex gap-2 border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150">
          <img
             className="w-6 h-6"
-            src="https://www.svgrepo.com/show/475656/google-color.svg"
+            src={githubIcon}
             loading="lazy"
             alt="google logo"
          />
-         <span>Continue with Google</span>
+         <span>Continue with Github</span>
       </button>
    );
 };
 
-export default GoogleSignIn;
+export default GithubSignIn;

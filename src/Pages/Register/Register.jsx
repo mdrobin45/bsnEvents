@@ -9,6 +9,7 @@ import Password from "../../Components/FormElements/FormFields/Password";
 import SubmitBtn from "../../Components/FormElements/FormFields/SubmitBtn";
 import TOS from "../../Components/FormElements/FormFields/TOS";
 import FormFooter from "../../Components/FormElements/FormFooter/FormFooter";
+import GithubSignIn from "../../Components/FormElements/FormFooter/SocialSignIn/GithubSignIn";
 import GoogleSignIn from "../../Components/FormElements/FormFooter/SocialSignIn/GoogleSignIn";
 import FormHeader from "../../Components/FormElements/FormHeader/FormHeader";
 import PageHeader from "../../Components/PageHeader/PageHeader";
@@ -44,7 +45,13 @@ const Register = () => {
                profileUpdate({
                   displayName: name,
                });
-               toast.success("Registration successful!");
+               const toastMsg = toast.loading("");
+               toast.update(toastMsg, {
+                  render: "Registration Successful!",
+                  type: "success",
+                  isLoading: false,
+                  autoClose: 1500,
+               });
                navigate("/");
             }
          })
@@ -72,7 +79,8 @@ const Register = () => {
                   linkUrl="/login"
                   linkText="Login"
                />
-               <GoogleSignIn setErrorMsg={setErrorMessage} />
+               <GoogleSignIn />
+               <GithubSignIn />
             </div>
          </div>
       </>

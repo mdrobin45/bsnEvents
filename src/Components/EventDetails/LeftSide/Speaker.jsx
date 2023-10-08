@@ -21,22 +21,22 @@ const Speaker = ({ speaker }) => {
             <p className="text-gray-400 mt-1">{title}</p>
             <p className="flex items-center gap-3 mt-3">
                <a
-                  className="border rounded-full p-1 hover:bg-primary text-white"
+                  className="border rounded-full p-1 hover:bg-[#B2276F] text-white"
                   href="#">
                   <BiLogoFacebook className="text-md transition-all text-gray-400 hover:text-white" />
                </a>
                <a
-                  className="border rounded-full p-1 hover:bg-primary text-white"
+                  className="border rounded-full p-1 hover:bg-[#B2276F] text-white"
                   href="#">
                   <BiLogoInstagram className="text-md transition-all text-gray-400 hover:text-white" />
                </a>
                <a
-                  className="border rounded-full p-1 hover:bg-primary text-white"
+                  className="border rounded-full p-1 hover:bg-[#B2276F] text-white"
                   href="#">
                   <BiLogoLinkedin className="text-md transition-all text-gray-400 hover:text-white" />
                </a>
                <a
-                  className="border rounded-full p-1 hover:bg-primary text-white"
+                  className="border rounded-full p-1 hover:bg-[#B2276F] text-white"
                   href="#">
                   <BiLogoTwitter className="text-md transition-all text-gray-400 hover:text-white" />
                </a>

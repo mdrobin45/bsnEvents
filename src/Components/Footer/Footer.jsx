@@ -28,13 +28,6 @@ const Footer = () => {
                   </li>
                   <li>
                      <NavLink
-                        to="/speakers"
-                        className="block py-2 pl-3 pr-4 text-gray-300 font-barlow uppercase hover:text-primary rounded md:bg-transparent md:p-0">
-                        Speakers
-                     </NavLink>
-                  </li>
-                  <li>
-                     <NavLink
                         to="/pricing"
                         className="block py-2 pl-3 pr-4 text-gray-300 font-barlow uppercase hover:text-primary rounded md:bg-transparent md:p-0">
                         Pricing

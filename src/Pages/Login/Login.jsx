@@ -1,11 +1,11 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import DisplayError from "../../Components/FormElements/FormFields/DisplayError";
 import Email from "../../Components/FormElements/FormFields/Email";
 import Password from "../../Components/FormElements/FormFields/Password";
 import SubmitBtn from "../../Components/FormElements/FormFields/SubmitBtn";
 import FormFooter from "../../Components/FormElements/FormFooter/FormFooter";
+import GithubSignIn from "../../Components/FormElements/FormFooter/SocialSignIn/GithubSignIn";
 import GoogleSignIn from "../../Components/FormElements/FormFooter/SocialSignIn/GoogleSignIn";
 import FormHeader from "../../Components/FormElements/FormHeader/FormHeader";
 import PageHeader from "../../Components/PageHeader/PageHeader";
@@ -13,7 +13,6 @@ import SiteTitle from "../../Components/SiteTitle/SiteTitle";
 import { AuthContext } from "../../MyContext/AuthContextProvider";
 
 const Login = () => {
-   const [errorMessage, setErrorMessage] = useState(null);
    const { loginWithEmailPassword } = useContext(AuthContext);
    const { state } = useLocation();
    const navigate = useNavigate();
@@ -76,7 +75,6 @@ const Login = () => {
                            className="ml-1 mb-3 block font-sans text-sm font-bold leading-normal text-pink-500 antialiased">
                            Forgotten Password?
                         </Link>
-                        <DisplayError errMsg={errorMessage} />
                         <SubmitBtn btnText="Login" />
                      </div>
                   </div>
@@ -86,7 +84,8 @@ const Login = () => {
                   linkText="Create a new account"
                   linkUrl="/register"
                />
-               <GoogleSignIn setErrorMsg={setErrorMessage} />
+               <GoogleSignIn />
+               <GithubSignIn />
             </div>
          </div>
       </>

@@ -1,10 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
+import Contact from "../Pages/Contact/Contact";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import EventDetails from "../Pages/EventDetails/EventDetails";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Pricing from "../Pages/Pricing/Pricing";
 import Register from "../Pages/Register/Register";
-import Speakers from "../Pages/Speakers/Speakers";
 import Root from "../Root/Root";
 import PrivateRoute from "./PrivateRoute";
 
@@ -12,6 +13,7 @@ const router = createBrowserRouter([
    {
       path: "/",
       element: <Root />,
+      errorElement: <ErrorPage />,
       children: [
          {
             path: "/",
@@ -23,8 +25,8 @@ const router = createBrowserRouter([
             element: <Pricing />,
          },
          {
-            path: "/speakers",
-            element: <Speakers />,
+            path: "/contact",
+            element: <Contact />,
          },
          {
             path: "/login",
