@@ -15,6 +15,7 @@ const router = createBrowserRouter([
          {
             path: "/",
             element: <Home />,
+            loader: () => fetch("https://mdrobin45.github.io/api/events.json"),
          },
          {
             path: "/pricing",

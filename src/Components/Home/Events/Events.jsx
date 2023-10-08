@@ -1,10 +1,9 @@
-import { useContext } from "react";
-import { FetchContext } from "../../../MyContext/FetchDataContextProvider";
+import { useLoaderData } from "react-router-dom";
 import SectionHeader from "../../SectionHeader/SectionHeader";
 import EventCard from "./EventCard";
 
 const Events = () => {
-   const events = useContext(FetchContext);
+   const events = useLoaderData();
    return (
       <>
          <div className="px-20">
