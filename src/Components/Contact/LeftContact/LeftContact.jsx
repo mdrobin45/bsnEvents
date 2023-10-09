@@ -5,7 +5,7 @@ import ContactInfoCard from "./ContactInfoCard";
 
 const LeftContact = () => {
    return (
-      <div className="flex flex-col gap-16 w-2/4">
+      <div className="flex flex-col gap-16 w-full md:w-2/4">
          <ContactInfoCard
             icon={locationIcon}
             title="Location"

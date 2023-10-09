@@ -4,7 +4,7 @@ import bgImage from "../../assets/images/achievement-bg.png";
 const PageHeader = ({ title }) => {
    return (
       <div
-         className="px-20   pt-64 pb-28"
+         className="px-20  pt-32 pb-10 text-center md:text-left lg:pt-64 lg:pb-28"
          style={{
             background: `linear-gradient(rgba(45,55,60,0.9) 100%,rgba(45,55,60,0.9) 100%), url(${bgImage})`,
             backgroundPosition: "center center",
@@ -12,7 +12,7 @@ const PageHeader = ({ title }) => {
             backgroundRepeat: "no-repeat",
          }}>
          <h2 className="text-5xl text-white font-barlow font-bold">{title}</h2>
-         <nav className="flex pr-5 py-3 mt-2 text-white bg-transparent">
+         <nav className="flex justify-center md:justify-start pr-5 py-3 mt-2 text-white bg-transparent">
             <ol className="inline-flex items-center space-x-1 md:space-x-3">
                <li className="inline-flex items-center">
                   <Link

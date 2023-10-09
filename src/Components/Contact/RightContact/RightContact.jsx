@@ -4,13 +4,13 @@ import Phone from "../../FormElements/FormFields/Phone";
 
 const RightContact = () => {
    return (
-      <div className="w-2/4">
+      <div className="w-full md:w-2/4">
          <h2
             style={{
                WebkitTextStroke: "1px #2d373c",
                WebkitTextFillColor: "transparent",
             }}
-            className="text-4xl pb-3 uppercase mb-1 font-bold font-barlow text-gray-800">
+            className="text-4xl text-center md:text-left pb-3 uppercase mb-1 font-bold font-barlow text-gray-800">
             Contact
          </h2>
          <form className="flex flex-col gap-7">
