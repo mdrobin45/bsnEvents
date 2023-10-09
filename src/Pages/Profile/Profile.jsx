@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { toast } from "react-toastify";
 import PageHeader from "../../Components/PageHeader/PageHeader";
 import SiteTitle from "../../Components/SiteTitle/SiteTitle";
 import { AuthContext } from "../../MyContext/AuthContextProvider";
@@ -6,6 +7,28 @@ import { AuthContext } from "../../MyContext/AuthContextProvider";
 const Profile = () => {
    const { user } = useContext(AuthContext);
    const { displayName, email, phoneNumber, photoURL, emailVerified } = user;
+
+   const { verifyEmail } = useContext(AuthContext);
+
+   // handle email verification
+   const verificationHandle = () => {
+      // Custom tost message
+      const toastMsg = toast.loading("");
+      toast.update(toastMsg, {
+         render: "Processing...",
+         isLoading: true,
+      });
+
+      verifyEmail().then(() => {
+         toast.update(toastMsg, {
+            render: "Verification email sent!",
+            type: "success",
+            isLoading: false,
+            autoClose: 1500,
+         });
+      });
+   };
+
    return (
       <div>
          <SiteTitle>Profile</SiteTitle>
@@ -68,7 +91,9 @@ const Profile = () => {
                               Active
                            </span>
                         ) : (
-                           <span className="bg-red-100 cursor-pointer text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">
+                           <span
+                              onClick={verificationHandle}
+                              className="bg-red-100 cursor-pointer text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">
                               Click here to verify email
                            </span>
                         )}
