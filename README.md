@@ -1,8 +1,45 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# LeaderShip Insight Conference
 
-Currently, two official plugins are available:
+It is a event managment website. Where people can join varius type business event and increase their leadership skill and nettwork around the world.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features & Functionality
+- See event details in a signle page
+- Event booking feature by submit simple form
+- User login and registration
+- Can see user details from profile page which is protected.
+- Have option to login with gmail and github account.
+- Can logout any time from website
+
+
+## Live Link
+
+https://business-event-b2ec5.web.app/
+
+
+## Lessons I Learned
+
+From this project I learned lots of things. I'm listing down what I actually learn from this simple project.
+- Effectively manage components and slice code in different pices.
+- Using of context API
+- Many conditional rendering
+- Improve my react router skills
+
+
+## Technology
+
+**Client:** React, TailwindCSS, React Router
+
+
+
+## Fake Data Reference
+#### Events API (JSON)
+```http
+https://mdrobin45.github.io/api/events.json
+```
+#### Speakers API (JSON)
+```http
+https://mdrobin45.github.io/api/speakers.json
+```
+
+
