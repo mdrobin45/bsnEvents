@@ -13,7 +13,10 @@ const Counter = () => {
          }}
          className="py-32 mt-32 lg:mb-20">
          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-y-10 lg:gap-y-0 lg:grid-cols-4 px-7 md:px-10 lg:px-20 gap-10 md:gap-0">
-            <div className="text-center">
+            <div
+               data-aos="fade-up"
+               data-aos-duration="800"
+               className="text-center">
                <img className="mx-auto" src={speakerImg} alt="Speaker" />
                <SingleCounter
                   title="Best Speakers"
@@ -21,7 +24,10 @@ const Counter = () => {
                   countEnd={150}
                />
             </div>
-            <div className="text-center">
+            <div
+               data-aos="fade-up"
+               data-aos-duration="800"
+               className="text-center">
                <img className="mx-auto" src={idealEventImg} alt="Speaker" />
                <SingleCounter
                   title="Ideal Event"
@@ -29,7 +35,10 @@ const Counter = () => {
                   countEnd={600}
                />
             </div>
-            <div className="text-center">
+            <div
+               data-aos="fade-up"
+               data-aos-duration="800"
+               className="text-center">
                <img className="mx-auto" src={scheduleImg} alt="Speaker" />
                <SingleCounter
                   title="New Schedule"
@@ -37,7 +46,10 @@ const Counter = () => {
                   countEnd={300}
                />
             </div>
-            <div className="text-center">
+            <div
+               data-aos="fade-up"
+               data-aos-duration="800"
+               className="text-center">
                <img className="mx-auto" src={peopleImg} alt="Speaker" />
                <SingleCounter
                   title="Participants"

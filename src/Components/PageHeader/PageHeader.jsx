@@ -4,7 +4,7 @@ import bgImage from "../../assets/images/achievement-bg.png";
 const PageHeader = ({ title }) => {
    return (
       <div
-         className="px-20  pt-32 pb-10 text-center md:text-left lg:pt-64 lg:pb-28"
+         className="px-20  pt-32 pb-20 text-center md:text-left lg:pt-64 lg:pb-28"
          style={{
             background: `linear-gradient(rgba(45,55,60,0.9) 100%,rgba(45,55,60,0.9) 100%), url(${bgImage})`,
             backgroundPosition: "center center",

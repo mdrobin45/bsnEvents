@@ -12,9 +12,12 @@ import logo from "../../assets/images/leadership.png";
 
 const Footer = () => {
    return (
-      <footer className="bg-gray-900 pt-10 md:pt-20 lg:pt-36 px-7 md:px-10 lg:px-20 ">
+      <footer className="bg-gray-900 overflow-hidden pt-10 md:pt-20 lg:pt-36 px-7 md:px-10 lg:px-20 ">
          <div className="flex text-center md:text-left flex-col md:flex-row justify-between items-start">
-            <div className="w-full md:w-1/5">
+            <div
+               data-aos="fade-up"
+               data-aos-duration="800"
+               className="w-full md:w-1/5">
                <h2 className="text-white font-barlow text-2xl font-semibold">
                   Quick Links
                </h2>
@@ -43,7 +46,10 @@ const Footer = () => {
                   </li>
                </ul>
             </div>
-            <div className="flex w-full py-4 md:py-0 md:w-3/5 flex-col items-center justify-center">
+            <div
+               data-aos="fade-up"
+               data-aos-duration="800"
+               className="flex w-full py-4 md:py-0 md:w-3/5 flex-col items-center justify-center">
                <h2 className="text-xl md:text-2xl text-white font-barlow uppercase font-semibold">
                   SUBSCRIBE OUR NEWSLETTER
                </h2>
@@ -61,7 +67,10 @@ const Footer = () => {
                   </button>
                </div>
             </div>
-            <div className="w-full md:w-1/5">
+            <div
+               data-aos="fade-up"
+               data-aos-duration="800"
+               className="w-full md:w-1/5">
                <h2 className="text-white font-barlow text-2xl font-semibold">
                   Contact
                </h2>
@@ -93,7 +102,10 @@ const Footer = () => {
             </div>
          </div>
          <hr className="w-full border-gray-500 mt-7" />
-         <div className="flex flex-col md:flex-row items-center md:justify-between py-16">
+         <div
+            data-aos="fade-up"
+            data-aos-duration="800"
+            className="flex flex-col md:flex-row items-center md:justify-between py-16">
             <div className="w-full text-center md:text-left md:w-1/3">
                <p className="text-white font-barlow">
                   Copyright 2023 Business Event| Design By{" "}

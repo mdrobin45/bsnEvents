@@ -15,7 +15,10 @@ const EventCard = ({ event }) => {
    const formateEventDate = dateFormat(event_date, "longDate");
    const eventAddress = address.split(",").slice(-2).toString();
    return (
-      <div className="relative flex w-full md:max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+      <div
+         data-aos="fade-up"
+         data-aos-duration="800"
+         className="relative flex w-full md:max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
          <div className="relative m-0 overflow-hidden rounded-none bg-transparent bg-clip-border text-gray-700 shadow-none">
             <img
                className=" hover:scale-[1.1] transition-all"

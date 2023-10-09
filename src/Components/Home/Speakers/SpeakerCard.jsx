@@ -8,7 +8,10 @@ import {
 const SpeakerCard = ({ speaker }) => {
    const { image, name, title } = speaker;
    return (
-      <div className="relative flex flex-col rounded-xl bg-gray-100 bg-clip-border text-gray-700 shadow-md">
+      <div
+         data-aos="fade-up"
+         data-aos-duration="800"
+         className="relative flex flex-col rounded-xl bg-gray-100 bg-clip-border text-gray-700 shadow-md">
          <div className="relative mx-4 mt-4 h-64 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
             <img className="w-full h-full" src={image} alt="profile-picture" />
          </div>
