@@ -31,7 +31,7 @@ const NavButtons = ({ expandBtnClick }) => {
             </>
          ) : (
             <Link
-               className="middle none border-2 border-primary hover:bg-transparent uppercase hover:border-primary center mb-2 rounded-lg bg-primary hover:text-primary py-2 font-semibold px-6 font-barlow text-lg text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+               className="middle none border-2 border-primary hover:bg-transparent uppercase hover:border-primary center mb-2 rounded-lg bg-primary hover:text-primary py-1 md:py-2 font-semibold px-2 md:px-6 font-barlow text-lg text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                to="/login"
                data-ripple-light="true">
                <span>Login</span>
@@ -41,7 +41,7 @@ const NavButtons = ({ expandBtnClick }) => {
          <button
             onClick={expandBtnClick}
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            className="inline-flex items-center bg-white p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
             aria-controls="navbar-sticky"
             aria-expanded="false">
             <svg

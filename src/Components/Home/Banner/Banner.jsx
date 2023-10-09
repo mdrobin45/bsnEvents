@@ -3,9 +3,9 @@ import bannerImage from "../../../assets/images/hero-figure1.png";
 
 const Banner = () => {
    return (
-      <div className="flex pb-0 md:pb-10 flex-col-reverse lg:flex-row h-screen px-7 md:px-16 lg:px-20 items-center justify-between">
-         <div className="w-full lg:w-2/4">
-            <div className="flex mt-10 md:mt-0 pb-2 md:pb-0 items-center gap-3">
+      <div className="flex pb-0 md:pb-10 flex-col-reverse lg:flex-row lg:h-screen px-7 md:px-16 lg:px-20 items-center justify-between">
+         <div className="w-full lg:w-2/4 md:pt-10 lg:pt-0 text-center lg:text-left">
+            <div className="flex mt-10 md:mt-0 pb-2 md:pb-0 items-center justify-center lg:justify-start gap-3">
                <BsCalendarEvent className="text-lg" />
                <h3
                   data-aos="fade-in"
@@ -25,7 +25,7 @@ const Banner = () => {
                excellence at Business Meetups and Conferences. Join us in
                shaping the future of business together
             </p>
-            <div className="flex flex-col md:flex-row items-center md:gap-10">
+            <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start md:gap-10">
                <button
                   data-aos="zoom-in"
                   data-aos-duration="800"

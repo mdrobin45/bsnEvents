@@ -8,7 +8,7 @@ const EventDetails = () => {
       <>
          <SiteTitle>Event Details</SiteTitle>
          <PageHeader title="Event Details" />
-         <div className="px-20 flex py-20 justify-between">
+         <div className="px-7 md:px-10 lg:px-20 flex flex-col lg:flex-row py-20 justify-between">
             <LeftSide />
             <RightSide />
          </div>

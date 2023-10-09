@@ -34,7 +34,7 @@ const EventInfo = () => {
 
    return (
       <div className="relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-         <div className="relative m-0 h-96 overflow-hidden rounded-none bg-transparent bg-clip-border text-gray-700 shadow-none">
+         <div className="relative m-0 lg:h-96 overflow-hidden rounded-none bg-transparent bg-clip-border text-gray-700 shadow-none">
             <img className="w-full" src={image} alt="ui/ux review check" />
             <div
                className="middle absolute bottom-0 left-0 none border-2 border-primary center bg-primary py-2 font-semibold px-6 font-barlow text-lg rounded-tr-md text-white shadow-md transition-all"
@@ -51,11 +51,11 @@ const EventInfo = () => {
                   </p>
                   <p className="text-sm text-gray-700">{formateEventDate}</p>
                </div>
-               <div className="flex items-center gap-3">
+               <div className="hidden md:flex items-center gap-3">
                   <p>
                      <BsDiagram3 className="text-primary text-2xl" />
                   </p>
-                  <p className="text-xl font-barlow font-bold text-primary">
+                  <p className="text-md md:text-xl font-barlow font-bold text-primary">
                      500 Seat
                   </p>
                </div>
@@ -67,7 +67,7 @@ const EventInfo = () => {
                </div>
             </div>
          </div>
-         <div className="flex p-3 items-center justify-between border-t border-b border-gray-300">
+         <div className="grid grid-cols-2 md:flex md:items-center md:justify-between p-3 gap-y-4 md:gap-y-0 border-t border-b border-gray-300">
             <div className="flex gap-2">
                <div>
                   <BsBlockquoteLeft className="text-primary text-lg mt-1" />
@@ -162,7 +162,7 @@ const EventInfo = () => {
             <h3 className="text-xl mb-4 font-bold font-barlow mt-4">
                Main Speaker:
             </h3>
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-1 md:grid-cols-2">
                {speakers.map((speaker, id) => (
                   <Speaker key={id} speaker={speaker} />
                ))}

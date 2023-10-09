@@ -53,7 +53,7 @@ const Footer = () => {
                <h2 className="text-xl md:text-2xl text-white font-barlow uppercase font-semibold">
                   SUBSCRIBE OUR NEWSLETTER
                </h2>
-               <h2 className="text-md lg:text-xl my-1 font-barlow text-primary">
+               <h2 className="text-md font-bold lg:text-xl my-1 font-barlow text-primary">
                   DON’T MISS OUR FEATURE UPDATE
                </h2>
                <div className="flex w-2/3 items-center mt-6">
@@ -74,7 +74,12 @@ const Footer = () => {
                <h2 className="text-white font-barlow text-2xl font-semibold">
                   Contact
                </h2>
-               <div className="flex justify-center md:justify-start items-center gap-3 my-3">
+               <div className="flex mt-4 items-center justify-center gap-8 md:hidden">
+                  <BsTelephonePlus className="text-white text-2xl" />
+                  <HiOutlineMail className="text-white text-2xl" />
+                  <BiMap className="text-white text-3xl" />
+               </div>
+               <div className="md:flex hidden justify-center md:justify-start items-center gap-3 my-3">
                   <div>
                      <BsTelephonePlus className="text-white text-2xl" />
                   </div>
@@ -82,7 +87,7 @@ const Footer = () => {
                      <p>+1 763-227-5032</p>
                   </div>
                </div>
-               <div className="flex justify-center md:justify-start items-center gap-3 my-3">
+               <div className="md:flex hidden justify-center md:justify-start items-center gap-3 my-3">
                   <div>
                      <HiOutlineMail className="text-white text-2xl" />
                   </div>
@@ -91,7 +96,7 @@ const Footer = () => {
                      <p>info@example.com</p>
                   </div>
                </div>
-               <div className="flex justify-center md:justify-start items-center gap-3 my-3">
+               <div className="md:flex hidden justify-center md:justify-start items-center gap-3 my-3">
                   <div>
                      <BiMap className="text-white text-3xl" />
                   </div>
@@ -105,7 +110,7 @@ const Footer = () => {
          <div
             data-aos="fade-up"
             data-aos-duration="800"
-            className="flex flex-col md:flex-row items-center md:justify-between py-16">
+            className="flex flex-col-reverse md:flex-row items-center md:justify-between pt-7 pb-16">
             <div className="w-full text-center md:text-left md:w-1/3">
                <p className="text-white font-barlow">
                   Copyright 2023 Business Event| Design By{" "}
@@ -118,35 +123,37 @@ const Footer = () => {
                   </a>
                </p>
             </div>
-            <div className="w-full mt-4 md:mt-0 md:w-1/3 flex items-center justify-center text-center">
-               <div className="w-44">
-                  <Link
-                     to="/"
-                     className="flex items-center justify-center gap-3">
-                     <img className="w-9" src={logo} alt="Logo" />
-                     <h2 className="text-4xl text-white font-bold font-barlow">
-                        LIC <span className="text-primary">2.0</span>
-                     </h2>
-                  </Link>
+            <div className="flex justify-between items-center md:w-3/5">
+               <div className="w-full mt-4 md:mt-0 justify-between flex items-center text-center">
+                  <div className="w-44">
+                     <Link
+                        to="/"
+                        className="flex items-center justify-center gap-3">
+                        <img className="w-9" src={logo} alt="Logo" />
+                        <h2 className="text-2xl md:text-4xl text-white font-bold font-barlow">
+                           LIC <span className="text-primary">2.0</span>
+                        </h2>
+                     </Link>
+                  </div>
                </div>
-            </div>
-            <div
-               className="flex mt-4 md:mt-0 w-full md:w-1/3 items-center justify-center
+               <div
+                  className="flex mt-4 md:mt-0 w-full md:w-1/3 items-center justify-center
              md:justify-end">
-               <p className="flex items-center justify-between gap-3">
-                  <a href="#">
-                     <BiLogoFacebook className="text-3xl transition-all text-gray-400 hover:text-primary" />
-                  </a>
-                  <a href="#">
-                     <BiLogoInstagram className="text-3xl transition-all text-gray-400 hover:text-primary" />
-                  </a>
-                  <a href="#">
-                     <BiLogoLinkedin className="text-3xl transition-all text-gray-400 hover:text-primary" />
-                  </a>
-                  <a href="#">
-                     <BiLogoTwitter className="text-3xl transition-all text-gray-400 hover:text-primary" />
-                  </a>
-               </p>
+                  <p className="flex items-center justify-between gap-3">
+                     <a href="#">
+                        <BiLogoFacebook className="text-3xl transition-all text-gray-400 hover:text-primary" />
+                     </a>
+                     <a href="#">
+                        <BiLogoInstagram className="text-3xl transition-all text-gray-400 hover:text-primary" />
+                     </a>
+                     <a href="#">
+                        <BiLogoLinkedin className="text-3xl transition-all text-gray-400 hover:text-primary" />
+                     </a>
+                     <a href="#">
+                        <BiLogoTwitter className="text-3xl transition-all text-gray-400 hover:text-primary" />
+                     </a>
+                  </p>
+               </div>
             </div>
          </div>
       </footer>

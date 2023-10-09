@@ -6,9 +6,9 @@ import Phone from "../../FormElements/FormFields/Phone";
 const BookForm = () => {
    return (
       <div>
-         <div className="flex items-center gap-3 bg-primary w-4/5 rounded-r-md p-2 mb-6">
-            <BsBookmarkCheck className="text-white text-2xl" />
-            <h2 className="text-2xl font-bold font-barlow text-white">
+         <div className="flex items-center justify-center lg:justify-start mx-auto lg:mx-0 gap-3 bg-transparent lg:bg-primary w-full lg:w-4/5 rounded-md lg:rounded-r-md p-2 mb-6">
+            <BsBookmarkCheck className="text-primary lg:text-white text-2xl" />
+            <h2 className="text-2xl font-bold font-barlow text-gray-700 lg:text-white">
                Book This Event
             </h2>
          </div>
