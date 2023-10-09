@@ -38,6 +38,13 @@ const Register = () => {
          return;
       }
 
+      // Custom tost message
+      const toastMsg = toast.loading("");
+      toast.update(toastMsg, {
+         render: "Please wait...",
+         isLoading: true,
+      });
+
       // Firebase email password signUp
       registerWithEmailPassword(email, password)
          .then((result) => {
@@ -45,7 +52,6 @@ const Register = () => {
                profileUpdate({
                   displayName: name,
                });
-               const toastMsg = toast.loading("");
                toast.update(toastMsg, {
                   render: "Registration Successful!",
                   type: "success",
@@ -55,7 +61,15 @@ const Register = () => {
                navigate("/");
             }
          })
-         .catch((err) => setErrorMessage(err.message));
+         .catch((err) => {
+            toast.update(toastMsg, {
+               render: "Registration failed!",
+               type: "error",
+               isLoading: false,
+               autoClose: 1000,
+            });
+            setErrorMessage(err.message);
+         });
    };
    return (
       <>
