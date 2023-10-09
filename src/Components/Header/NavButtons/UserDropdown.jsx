@@ -16,7 +16,7 @@ const UserDropdown = ({ expandProfile }) => {
       <div
          className={`z-10 ${
             !expandProfile ? "hidden" : ""
-         } absolute top-16 right-0 bg-white divide-y divide-gray-100 rounded-lg shadow w-44`}>
+         } absolute top-12 right-0 bg-white divide-y divide-gray-100 rounded-lg shadow w-44`}>
          <div className="px-4 py-3 text-sm text-gray-900">
             <div>{displayName ? displayName : "No name"}</div>
             <div className="font-medium truncate">
@@ -27,7 +27,7 @@ const UserDropdown = ({ expandProfile }) => {
             <button
                onClick={handleLogOut}
                className="block w-full font-barlow uppercase text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-               Sign out
+               Logout
             </button>
          </div>
       </div>
