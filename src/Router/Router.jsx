@@ -4,6 +4,7 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import EventDetails from "../Pages/EventDetails/EventDetails";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
+import PasswordReset from "../Pages/PasswordReset/PasswordReset";
 import Profile from "../Pages/Profile/Profile";
 import Register from "../Pages/Register/Register";
 import Speakers from "../Pages/Speakers/Speakers";
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
          {
             path: "/register",
             element: <Register />,
+         },
+         {
+            path: "/reset-password",
+            element: <PasswordReset />,
          },
          {
             path: "/events",

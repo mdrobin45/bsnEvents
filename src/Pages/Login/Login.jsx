@@ -26,7 +26,7 @@ const Login = () => {
       // Custom tost message
       const toastMsg = toast.loading("");
       toast.update(toastMsg, {
-         render: "Please wait...",
+         render: "Processing...",
          isLoading: true,
       });
 
