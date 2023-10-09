@@ -14,7 +14,7 @@ const LeftContact = () => {
          <ContactInfoCard
             icon={phoneIcon}
             title="Phone"
-            subtitle="012 3456 789102"
+            subtitle="+012 3456 789102"
          />
          <ContactInfoCard
             icon={emailIcon}
